@@ -21,13 +21,12 @@ namespace paymentgateway.Services
 		private StripeSettings _settings;
 
         //IMapper _mapper;
-		public StripeService(IOptions<StripeSettings> settings){
-            _settings = settings.Value;
+		public StripeService(StripeSettings settings){
+            _settings = settings;
             //_mapper = mapper;
 			StripeConfiguration.ApiKey = _settings.ApiKey;
 
 		}
-
 
 		public async Task<string> GetTokenId(StripeClientModel model){
 

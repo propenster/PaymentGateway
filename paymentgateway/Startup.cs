@@ -33,6 +33,11 @@ namespace paymentgateway
             services.AddScoped<IStripeService, StripeService>();
             services.AddScoped<IVirtualCardIssuingService, VirtualCardIssuingService>();
             services.Configure<StripeSettings>(Configuration.GetSection("StripeSettings"));
+            var stripeConfig = new StripeSettings
+            {
+                ApiKey = Configuration["StripeSettings:ApiKey"]
+            };
+            services.AddSingleton<StripeSettings>(stripeConfig);
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Payment Gateway API", Version = "v1" });

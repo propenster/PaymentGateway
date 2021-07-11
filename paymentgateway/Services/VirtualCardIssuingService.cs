@@ -26,22 +26,32 @@ namespace paymentgateway.Services
         {
             var options = new CardholderCreateOptions
             {
-                Billing = new CardholderBillingOptions
+                Billing = new Stripe.Issuing.CardholderBillingOptions 
                 {
-                    Address = new AddressOptions
+                    Address = new Stripe.AddressOptions
                     {
-                        Line1 = request.Address.Line1,
                         City = request.Address.City,
+                        Country = request.Address.Country,
+                        Line1 = request.Address.Line1,
+                        Line2 = request.Address.Line2,
                         PostalCode = request.Address.PostalCode,
-                        Country = request.Address.Country //2chars
-                    },
+                        State = request.Address.State //2chars
+                    },   
                     
+                },
+                Individual = new CardholderIndividualOptions
+                {
+                    Dob = request.Individual.Dob,
+                    FirstName = request.Individual.FirstName,
+                    LastName = request.Individual.LastName,
+                    Verification = request.Individual.Verification
                 },
                 Email = request.Email,
                 PhoneNumber = request.PhoneNumber,
                 Name = request.Name,
                 Status = request.Status,
                 Type = request.Type,
+                
                 //SpendingControls = 333
             };
 
