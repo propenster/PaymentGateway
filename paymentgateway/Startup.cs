@@ -31,6 +31,7 @@ namespace paymentgateway
         {
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddScoped<IStripeService, StripeService>();
+            services.AddScoped<IVirtualCardIssuingService, VirtualCardIssuingService>();
             services.Configure<StripeSettings>(Configuration.GetSection("StripeSettings"));
             services.AddSwaggerGen(c =>
             {

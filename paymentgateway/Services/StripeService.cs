@@ -10,6 +10,8 @@ using paymentgateway.Models;
 using Microsoft.Extensions.Options;
 using AutoMapper;
 using System.Threading;
+using System.Configuration;
+using Microsoft.Extensions.Configuration;
 
 namespace paymentgateway.Services
 {
@@ -18,11 +20,10 @@ namespace paymentgateway.Services
 	{
 		private StripeSettings _settings;
 
-		IMapper _mapper;
-
-		public StripeService(IOptions<StripeSettings> settings, IMapper mapper){
-			_settings = settings.Value;
-			_mapper = mapper;
+        //IMapper _mapper;
+		public StripeService(IOptions<StripeSettings> settings){
+            _settings = settings.Value;
+            //_mapper = mapper;
 			StripeConfiguration.ApiKey = _settings.ApiKey;
 
 		}
