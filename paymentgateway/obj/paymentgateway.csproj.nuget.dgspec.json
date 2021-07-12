@@ -45,6 +45,10 @@
               "target": "Package",
               "version": "[8.1.1, )"
             },
+            "BitPay": {
+              "target": "Package",
+              "version": "[4.0.2104, )"
+            },
             "NewtonSoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"

@@ -33,6 +33,3 @@ C:\Dev\NetPaymentGateWay\paymentgateway\bin\Debug\netcoreapp3.1\Microsoft.AspNet
 C:\Dev\NetPaymentGateWay\paymentgateway\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Dev\NetPaymentGateWay\paymentgateway\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\Dev\NetPaymentGateWay\paymentgateway\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Newtonsoft.dll
-C:\Dev\NetPaymentGateWay\paymentgateway\obj\Debug\netcoreapp3.1\paymentgateway.csproj.CoreCompileInputs.cache
-C:\Dev\NetPaymentGateWay\paymentgateway\obj\Debug\netcoreapp3.1\paymentgateway.MvcApplicationPartsAssemblyInfo.cs
-C:\Dev\NetPaymentGateWay\paymentgateway\obj\Debug\netcoreapp3.1\paymentgateway.MvcApplicationPartsAssemblyInfo.cache
